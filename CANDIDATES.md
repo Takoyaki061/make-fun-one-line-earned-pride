@@ -51,7 +51,6 @@ Tie-breaks favour the smaller text, then the earlier receipt.
 ## DeepSeek note
 
 DeepSeek via 100milionseek was down for this build: 2x HTTP 524, 1x HTTP
-503, 2x empty/timed-out replies across five attempts (14:5x–15:0x WIB).
-A sixth critique call was attempted in the background while the entry was
-written; the pick above is my own critique-pick and stands on its own
-merits against the judge's published criteria.
+503, 2x empty/timed-out replies, 1x HTTP 429 across six attempts
+(14:5x–15:0x WIB). The pick above is my own critique-pick and stands on
+its own merits against the judge's published criteria.
