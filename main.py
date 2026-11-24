@@ -52,7 +52,12 @@ def main() -> None:
     with open(OUTPUT_PATH, "w", encoding="utf-8", newline="") as f:
         f.write(LINE)
     # Read back and confirm the gate's shape: exactly the line, no
-    # trailing newline, no extra bytes.
+    # trailing newline, no extra bytes — and count characters, not
+    # bytes, since the gate counts 1 to 240 characters of UTF-8 text.
+    with open(OUTPUT_PATH, encoding="utf-8", newline="") as f:
+        written_text = f.read()
+    if written_text != LINE or not (1 <= len(written_text) <= 240):
+        raise ValueError(f"entry.txt holds {written_text!r}, expected {LINE!r}")
     with open(OUTPUT_PATH, "rb") as f:
         written = f.read()
     if written != LINE.encode("utf-8"):
